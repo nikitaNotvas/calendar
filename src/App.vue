@@ -1,5 +1,40 @@
 <script setup>
 import {ref,watch} from 'vue';
+import app from './App.vue'
+import home from '@/views/Home.vue'
+import { createRouter, createWebHashHistory } from 'vue-router'
+import HomePage from '../views/HomePage.vue'
+
+const routes = [
+   {
+      path: '/',
+      name: 'home',
+      component: HomePage
+   },
+   {
+      path: '/about',
+      name: 'about',
+      component: AboutPage
+   },
+]
+
+const router = createRouter({
+   history: createWebHashHistory(),
+   routes
+})
+export default router
+
+
+
+
+
+
+
+
+
+
+
+
 
 </script>
 
