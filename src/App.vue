@@ -1,48 +1,21 @@
 <script setup>
 import {ref,watch} from 'vue';
-import app from './App.vue'
-import home from '@/views/Home.vue'
-import { createRouter, createWebHashHistory } from 'vue-router'
-import HomePage from '../views/HomePage.vue'
-
-const routes = [
-   {
-      path: '/',
-      name: 'home',
-      component: HomePage
-   },
-   {
-      path: '/about',
-      name: 'about',
-      component: AboutPage
-   },
-]
-
-const router = createRouter({
-   history: createWebHashHistory(),
-   routes
-})
-export default router
-
-
-
-
-
-
-
-
-
-
-
-
 
 </script>
 
 <template>
+  <nav>
+    <router-link to="/">home</router-link><br>
+    <router-link to="/about">about</router-link><br>
+    
+  </nav>
   <img class="img" src="logo.png">
 <h1>Welcome to Calendar for schoolars by schoolars</h1>
 
+<router-view></router-view>
+
 </template>
+
 <style>
 h1{
 font-size: 45px;    
