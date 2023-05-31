@@ -5,12 +5,22 @@ import {ref,watch} from 'vue';
 
 <template>
   <nav>
-    <router-link to="/">home</router-link><br>
-    <router-link to="/about">about</router-link><br>
+    <v-card>
+    <v-tabs bg-color="blue" center-active>
+      <v-tab><router-link to="/">Home</router-link></v-tab>
+      <v-tab> <router-link to="/about">About</router-link></v-tab>
+      <v-tab><router-link to="/team">More about project</router-link></v-tab>
+      <v-tab><router-link to="/moreaboutus">Team</router-link></v-tab>
+      <v-tab></v-tab>
+      <v-tab></v-tab>
+      <v-tab></v-tab><hr>
+      <img class="smallogo" src="logo.png">
+    </v-tabs>
+  </v-card>
+    
     
   </nav>
-  <img class="img" src="logo.png">
-<h1>Welcome to Calendar for schoolars by schoolars</h1>
+
 
 <router-view></router-view>
 
@@ -29,6 +39,15 @@ margin-left: auto;
 margin-right: auto;
 width: 25%;
 }
+p{
+    font-size: 45px;    
+text-align: center;
+color: rgb(49, 166, 255);
+}
+    .smollogo{
+      display: block;
 
+      width: 10px;
+    }
 
 </style>
