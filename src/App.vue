@@ -1,17 +1,20 @@
 <script setup>
 import {ref,watch} from 'vue';
 
+
+async function asyncFunction() { const result = await fetch('https://holidays.abstractapi.com/v1/'); console.log(result)}
+
 </script>
 
 <template>
   <nav>
     <v-card>
-    <v-tabs bg-color="blue" center-active>
-      <v-tab><router-link to="/">Home</router-link></v-tab>
+    <v-tabs bg-color="blue"  center-active>
+      <v-tab><router-link  font-weight-bold to="/">Home</router-link></v-tab>
       <v-tab> <router-link to="/about">About</router-link></v-tab>
       <v-tab><router-link to="/team">More about project</router-link></v-tab>
       <v-tab><router-link to="/moreaboutus">Team</router-link></v-tab>
-      <v-tab></v-tab>
+      <v-tab @click="asyncFunction"> fetch button</v-tab>
       <v-tab></v-tab>
       <v-tab></v-tab><hr>
       <img class="smallogo" src="logo.png">
