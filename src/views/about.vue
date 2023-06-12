@@ -1,9 +1,7 @@
 <template>
-
-    <div>
-        <H1>About </H1>
+ <H1>About </H1>
      
-        <p>A lot of text and more will be here soon</p>
-    </div>
+<p>This website is going to allow you to see holidays in which you will not attend school</p>
+    
 
 </template>
